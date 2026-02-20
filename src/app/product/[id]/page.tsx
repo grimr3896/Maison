@@ -1,0 +1,109 @@
+import { notFound } from "next/navigation";
+import { getProductById } from "@/lib/catalog";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { ChatAssistant } from "@/components/ChatAssistant";
+import { Recommendations } from "@/components/Recommendations";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+
+export default async function ProductPage({ params }: { params: { id: string } }) {
+  const { id } = await params;
+  const result = getProductById(id);
+
+  if (!result) return notFound();
+  const { product, category, group } = result;
+
+  return (
+    <div className="min-h-screen bg-stone-50">
+      <Navbar />
+      
+      <main className="max-w-7xl mx-auto pt-32 pb-20 px-[5%]">
+        {/* Breadcrumb */}
+        <nav className="flex items-center flex-wrap gap-2 text-[0.68rem] uppercase tracking-widest text-muted-foreground mb-16">
+          <Link href="/" className="hover:text-primary">Home</Link>
+          <span className="opacity-30">/</span>
+          <Link href={`/category/${category.id}`} className="hover:text-primary">{category.label}</Link>
+          <span className="opacity-30">/</span>
+          <span className="text-foreground font-bold">{product.name}</span>
+        </nav>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          {/* Image Area */}
+          <div className="relative aspect-square bg-stone-100 rounded-[2.5rem] flex items-center justify-center text-[10rem] sticky top-32 overflow-hidden shadow-sm">
+            <div className="bg-grain opacity-5" />
+            <span className="z-10">{product.emoji}</span>
+          </div>
+
+          {/* Info Area */}
+          <div className="space-y-10">
+            <div className="space-y-4">
+              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-primary font-bold">
+                {category.id} › {group.name}
+              </p>
+              <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-tight">
+                {product.name}
+              </h1>
+              <p className="text-muted-foreground font-light text-sm italic">{product.model}</p>
+            </div>
+
+            <div className="h-px bg-stone-200" />
+
+            <div className="space-y-6">
+              <p className="text-stone-700 leading-relaxed font-light">
+                {product.desc}
+              </p>
+              
+              <ul className="space-y-4">
+                {product.features.map((feat, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm font-light text-stone-600 border-b border-stone-200/50 pb-3 last:border-0">
+                    <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                    {feat}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="h-px bg-stone-200" />
+
+            <div className="space-y-6">
+              <Link href={`/inquiry/${product.id}`} className="block">
+                <Button className="w-full py-8 text-sm tracking-[0.2em] uppercase rounded-xl hover:shadow-2xl transition-all gap-3 bg-stone-900 hover:bg-primary">
+                  Get This Item
+                  <ArrowUpRight className="w-4 h-4" />
+                </Button>
+              </Link>
+              <p className="text-center text-[0.65rem] text-muted-foreground tracking-wide font-light">
+                No payment needed now — just a quick inquiry and we&apos;ll be in touch.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Specifications */}
+        <section className="mt-32 space-y-10">
+          <div className="text-center md:text-left">
+            <p className="text-[0.62rem] tracking-[0.2em] uppercase text-primary font-bold mb-2">Technical Details</p>
+            <h2 className="font-headline text-3xl">Specifications</h2>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200 border border-stone-200 rounded-3xl overflow-hidden shadow-sm">
+            {product.specs.map((spec, i) => (
+              <div key={i} className="bg-white p-8 space-y-2">
+                <p className="text-[0.55rem] tracking-widest uppercase text-muted-foreground">{spec.l}</p>
+                <p className="text-stone-900 font-medium">{spec.v}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* GenAI Recommendations */}
+        <Recommendations currentProductId={product.id} />
+      </main>
+
+      <Footer />
+      <ChatAssistant />
+    </div>
+  );
+}
