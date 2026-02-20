@@ -1,10 +1,15 @@
+
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { CATALOG } from "@/lib/catalog";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function Home() {
+  const aboutImage = PlaceHolderImages.find(img => img.id === 'about-maison');
+
   return (
     <div className="relative min-h-screen">
       <Navbar />
@@ -13,7 +18,7 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-stone-950">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_28%_65%,#3a2a18_0%,#1a1a1a_60%)]" />
         <div className="bg-grain" />
-        <div className="absolute inset-0 opacity-5 bg-[repeating-linear-gradient(0deg,transparent,transparent_60px,rgba(255,255,255,0.3)_60px,rgba(255,255,255,0.3)_61px)]" />
+        <div className="absolute inset-0 opacity-10 bg-[repeating-linear-gradient(0deg,transparent,transparent_60px,rgba(255,255,255,0.3)_60px,rgba(255,255,255,0.3)_61px)]" />
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto space-y-8">
           <p className="text-[0.65rem] tracking-[0.4em] uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
@@ -27,17 +32,32 @@ export default function Home() {
             Premium appliances, thoughtful furniture, and cutting-edge gaming — curated for the way you actually live.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700">
-            {Object.entries(CATALOG).map(([key, cat]) => (
-              <Link
-                key={key}
-                href={`/category/${key}`}
-                className="group p-6 min-w-[140px] border border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl flex flex-col items-center gap-3 transition-all hover:bg-primary hover:border-primary"
-              >
-                <span className="text-3xl group-hover:scale-110 transition-transform">{cat.emoji}</span>
-                <span className="text-[0.65rem] tracking-widest uppercase text-white font-bold">{cat.id}</span>
-              </Link>
-            ))}
+          <div className="flex flex-wrap justify-center gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-700">
+            {Object.entries(CATALOG).map(([key, cat]) => {
+              const catImage = PlaceHolderImages.find(img => img.id === cat.image);
+              return (
+                <Link
+                  key={key}
+                  href={`/category/${key}`}
+                  className="group relative w-[200px] h-[250px] overflow-hidden rounded-2xl flex flex-col justify-end p-6 transition-all hover:scale-105"
+                >
+                  {catImage && (
+                    <Image 
+                      src={catImage.imageUrl} 
+                      alt={catImage.description} 
+                      fill 
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      data-ai-hint={catImage.imageHint}
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/20 to-transparent" />
+                  <div className="relative z-10 space-y-1">
+                    <span className="text-[0.65rem] tracking-widest uppercase text-primary font-bold">{cat.id}</span>
+                    <h3 className="text-white font-headline text-xl">{cat.label.split(' ')[0]}</h3>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
         
@@ -67,7 +87,7 @@ export default function Home() {
               <p className="text-[0.62rem] tracking-widest uppercase text-muted-foreground">Collections</p>
             </div>
             <div>
-              <p className="font-headline text-4xl text-primary">50+</p>
+              <p className="font-headline text-4xl text-primary">20+</p>
               <p className="text-[0.62rem] tracking-widest uppercase text-muted-foreground">Products</p>
             </div>
             <div>
@@ -77,10 +97,18 @@ export default function Home() {
           </div>
         </div>
         
-        <div className="relative aspect-[4/3] bg-stone-200 rounded-3xl overflow-hidden flex items-center justify-center text-8xl shadow-2xl">
-          <div className="bg-grain" />
+        <div className="relative aspect-[4/3] bg-stone-200 rounded-3xl overflow-hidden shadow-2xl group">
+          <div className="bg-grain z-10" />
+          {aboutImage && (
+            <Image 
+              src={aboutImage.imageUrl} 
+              alt={aboutImage.description} 
+              fill 
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              data-ai-hint={aboutImage.imageHint}
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary/10" />
-          🏡
         </div>
       </section>
 

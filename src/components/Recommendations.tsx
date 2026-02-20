@@ -1,11 +1,14 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { generateProductRecommendations, ProductRecommendationOutput } from "@/ai/flows/generate-product-recommendations";
 import { getProductById } from "@/lib/catalog";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 interface Props {
   currentProductId: string;
@@ -55,12 +58,21 @@ export function Recommendations({ currentProductId }: Props) {
         {recs.recommendations.map((rec) => {
           const item = getProductById(rec.id);
           if (!item) return null;
+          const prodImage = PlaceHolderImages.find(img => img.id === item.product.image);
           return (
             <Link key={rec.id} href={`/product/${rec.id}`}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 overflow-hidden group border-none bg-stone-100/50">
                 <CardContent className="p-0">
-                  <div className="aspect-square flex items-center justify-center text-5xl bg-stone-200/50 group-hover:scale-105 transition-transform duration-500">
-                    {item.product.emoji}
+                  <div className="aspect-square relative flex items-center justify-center bg-stone-200/50 overflow-hidden">
+                    {prodImage && (
+                      <Image 
+                        src={prodImage.imageUrl} 
+                        alt={prodImage.description} 
+                        fill 
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-ai-hint={prodImage.imageHint}
+                      />
+                    )}
                   </div>
                   <div className="p-6 space-y-2">
                     <p className="text-[0.55rem] uppercase tracking-widest text-primary font-bold">

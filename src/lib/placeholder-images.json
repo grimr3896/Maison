@@ -1,3 +1,100 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-kitchen",
+      "description": "Modern luxury kitchen with high-end appliances",
+      "imageUrl": "https://images.unsplash.com/photo-1610177534644-34d881503b83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc3MTYxNjk0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern kitchen"
+    },
+    {
+      "id": "hero-furniture",
+      "description": "Elegant living room with designer furniture",
+      "imageUrl": "https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzcxNjI0OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern furniture"
+    },
+    {
+      "id": "hero-gaming",
+      "description": "Ultramodern gaming setup with neon lighting",
+      "imageUrl": "https://images.unsplash.com/photo-1630201129622-a8e8ef3f7245?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnYW1pbmclMjBzZXR1cHxlbnwwfHx8fDE3NzE1NjQ4NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming setup"
+    },
+    {
+      "id": "prod-blender-1",
+      "description": "High performance silver countertop blender",
+      "imageUrl": "https://images.unsplash.com/photo-1767465837503-c0f3c2e00c29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzaWx2ZXIlMjBibGVuZGVyfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silver blender"
+    },
+    {
+      "id": "prod-blender-2",
+      "description": "Compact personal smoothie blender",
+      "imageUrl": "https://picsum.photos/seed/5/600/600",
+      "imageHint": "personal blender"
+    },
+    {
+      "id": "prod-fryer-1",
+      "description": "Large digital air fryer on kitchen counter",
+      "imageUrl": "https://images.unsplash.com/photo-1690642109567-940e7fc2cd5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhaXIlMjBmcnllcnxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "air fryer"
+    },
+    {
+      "id": "prod-coffee-1",
+      "description": "Professional espresso machine with steam wand",
+      "imageUrl": "https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlc3ByZXNzbyUyMG1hY2hpbmV8ZW58MHx8fHwxNzcxNTEwMTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "espresso machine"
+    },
+    {
+      "id": "prod-sofa-1",
+      "description": "Grey modular Scandinavian style sofa",
+      "imageUrl": "https://images.unsplash.com/photo-1759722668385-90006d9c7aa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmV5JTIwc29mYXxlbnwwfHx8fDE3NzE1NDExOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "grey sofa"
+    },
+    {
+      "id": "prod-bed-1",
+      "description": "Modern walnut platform bed with white linens",
+      "imageUrl": "https://picsum.photos/seed/9/600/600",
+      "imageHint": "walnut bed"
+    },
+    {
+      "id": "prod-chair-1",
+      "description": "Ergonomic black mesh office chair",
+      "imageUrl": "https://images.unsplash.com/photo-1628062699790-7c45262b82b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvZmZpY2UlMjBjaGFpcnxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office chair"
+    },
+    {
+      "id": "prod-ps5",
+      "description": "PlayStation 5 console with DualSense controller",
+      "imageUrl": "https://images.unsplash.com/photo-1665041974623-d398d035023e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwczUlMjBjb25zb2xlfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ps5 console"
+    },
+    {
+      "id": "prod-xbox",
+      "description": "Xbox Series X console in dark setting",
+      "imageUrl": "https://images.unsplash.com/photo-1543622748-5ee7237e8565?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx4Ym94JTIwY29uc29sZXxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "xbox console"
+    },
+    {
+      "id": "prod-switch",
+      "description": "Nintendo Switch OLED white model",
+      "imageUrl": "https://images.unsplash.com/photo-1585857188823-77658a70979a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuaW50ZW5kbyUyMHN3aXRjaHxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nintendo switch"
+    },
+    {
+      "id": "prod-controller-1",
+      "description": "Black wireless gaming controller",
+      "imageUrl": "https://images.unsplash.com/photo-1611138290962-2c550ffd4002?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBjb250cm9sbGVyfGVufDB8fHx8MTc3MTYwODQ2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming controller"
+    },
+    {
+      "id": "prod-headset-1",
+      "description": "Premium wireless gaming headset",
+      "imageUrl": "https://images.unsplash.com/photo-1629429407756-4a7703614972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBoZWFkc2V0fGVufDB8fHx8MTc3MTUyMDEzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming headset"
+    },
+    {
+      "id": "about-maison",
+      "description": "Beautifully lit interior of a luxury home store",
+      "imageUrl": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsdXh1cnklMjBob21lfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "luxury home"
+    }
+  ]
 }

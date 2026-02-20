@@ -1,10 +1,12 @@
+
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { CATALOG } from "@/lib/catalog";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 import {
   Accordion,
   AccordionContent,
@@ -18,12 +20,25 @@ export default async function CategoryPage({ params }: { params: { id: string } 
 
   if (!category) return notFound();
 
+  const heroImage = PlaceHolderImages.find(img => img.id === category.image);
+
   return (
     <div className="min-h-screen bg-stone-50">
       <Navbar />
       
       {/* Category Hero */}
-      <section className={`relative pt-40 pb-24 px-[5%] overflow-hidden ${category.theme} text-stone-900`}>
+      <section className={`relative pt-40 pb-24 px-[5%] overflow-hidden bg-white text-stone-900`}>
+        {heroImage && (
+          <div className="absolute inset-0 opacity-10">
+            <Image 
+              src={heroImage.imageUrl} 
+              alt={heroImage.description} 
+              fill 
+              className="object-cover"
+              data-ai-hint={heroImage.imageHint}
+            />
+          </div>
+        )}
         <div className="bg-grain" />
         <div className="relative z-10 max-w-7xl mx-auto space-y-10">
           <nav className="flex items-center gap-3 text-[0.65rem] uppercase tracking-widest text-stone-900/40">
@@ -33,10 +48,9 @@ export default async function CategoryPage({ params }: { params: { id: string } 
           </nav>
           
           <div className="space-y-6">
-            <span className="text-6xl block transform hover:scale-110 transition-transform cursor-default w-fit">{category.emoji}</span>
             <div className="space-y-3">
               <p className="text-[0.65rem] tracking-[0.4em] uppercase text-primary font-bold">{category.label}</p>
-              <h1 className="font-headline text-5xl md:text-8xl leading-[1.1] whitespace-pre-line tracking-tight">
+              <h1 className="font-headline text-5xl md:text-8xl leading-[1.1] whitespace-pre-line tracking-tight text-stone-900">
                 {category.title}
               </h1>
             </div>
@@ -74,7 +88,8 @@ export default async function CategoryPage({ params }: { params: { id: string } 
             <AccordionItem value={gk} key={gk} id={group.name.toLowerCase()} className="border-b border-stone-200">
               <AccordionTrigger className="hover:no-underline group py-10 px-4">
                 <div className="flex items-center gap-8 text-left">
-                  <div className="w-20 h-20 rounded-[1.5rem] bg-stone-100 flex items-center justify-center text-4xl group-hover:bg-stone-200 group-hover:shadow-inner transition-all duration-500">
+                  <div className="w-20 h-20 rounded-[1.5rem] bg-stone-100 flex items-center justify-center text-4xl group-hover:bg-stone-200 group-hover:shadow-inner transition-all duration-500 overflow-hidden relative">
+                    <div className="bg-grain opacity-5 z-10" />
                     {group.emoji}
                   </div>
                   <div>
@@ -88,29 +103,40 @@ export default async function CategoryPage({ params }: { params: { id: string } 
               </AccordionTrigger>
               <AccordionContent className="pb-16 pt-8 px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
-                  {group.products.map((product) => (
-                    <Link key={product.id} href={`/product/${product.id}`} className="group space-y-5">
-                      <div className="relative aspect-square bg-stone-100 rounded-[2rem] flex items-center justify-center text-6xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 overflow-hidden border border-transparent group-hover:border-stone-200">
-                        <div className="bg-grain opacity-[0.03]" />
-                        {product.badge && (
-                          <div className="absolute top-5 left-5 px-4 py-1.5 bg-primary text-white text-[0.55rem] uppercase tracking-widest font-black z-10 shadow-lg">
-                            {product.badge}
-                          </div>
-                        )}
-                        <span className="group-hover:scale-110 transition-transform duration-700">{product.emoji}</span>
-                      </div>
-                      <div className="space-y-2 px-2">
-                        <p className="text-[0.55rem] tracking-widest uppercase text-primary font-bold">{group.name}</p>
-                        <h3 className="font-headline text-xl text-stone-900 group-hover:text-primary transition-colors leading-snug">
-                          {product.name}
-                        </h3>
-                        <p className="text-xs text-muted-foreground font-light tracking-wide">{product.model}</p>
-                        <div className="pt-3 text-[0.62rem] uppercase tracking-widest text-primary font-bold opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
-                          View Details →
+                  {group.products.map((product) => {
+                    const prodImage = PlaceHolderImages.find(img => img.id === product.image);
+                    return (
+                      <Link key={product.id} href={`/product/${product.id}`} className="group space-y-5">
+                        <div className="relative aspect-square bg-stone-100 rounded-[2rem] overflow-hidden transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 border border-transparent group-hover:border-stone-200">
+                          <div className="bg-grain opacity-[0.03] z-10" />
+                          {product.badge && (
+                            <div className="absolute top-5 left-5 px-4 py-1.5 bg-primary text-white text-[0.55rem] uppercase tracking-widest font-black z-20 shadow-lg">
+                              {product.badge}
+                            </div>
+                          )}
+                          {prodImage && (
+                            <Image 
+                              src={prodImage.imageUrl} 
+                              alt={prodImage.description} 
+                              fill 
+                              className="object-cover transition-transform duration-700 group-hover:scale-110"
+                              data-ai-hint={prodImage.imageHint}
+                            />
+                          )}
                         </div>
-                      </div>
-                    </Link>
-                  ))}
+                        <div className="space-y-2 px-2">
+                          <p className="text-[0.55rem] tracking-widest uppercase text-primary font-bold">{group.name}</p>
+                          <h3 className="font-headline text-xl text-stone-900 group-hover:text-primary transition-colors leading-snug">
+                            {product.name}
+                          </h3>
+                          <p className="text-xs text-muted-foreground font-light tracking-wide">{product.model}</p>
+                          <div className="pt-3 text-[0.62rem] uppercase tracking-widest text-primary font-bold opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
+                            View Details →
+                          </div>
+                        </div>
+                      </Link>
+                    );
+                  })}
                 </div>
               </AccordionContent>
             </AccordionItem>

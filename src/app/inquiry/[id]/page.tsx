@@ -1,6 +1,8 @@
+
 "use client";
 
 import { use, useState } from "react";
+import Image from "next/image";
 import { getProductById } from "@/lib/catalog";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -12,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default function InquiryPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -21,6 +24,8 @@ export default function InquiryPage({ params }: { params: Promise<{ id: string }
 
   if (!result) return notFound();
   const { product } = result;
+
+  const prodImage = PlaceHolderImages.find(img => img.id === product.image);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,11 +52,30 @@ export default function InquiryPage({ params }: { params: Promise<{ id: string }
 
         {!submitted ? (
           <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="flex flex-col md:flex-row gap-8 items-start md:items-center bg-stone-900 p-8 rounded-[2rem] text-white shadow-xl">
-              <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-4xl shrink-0">
-                {product.emoji}
+            <div className="flex flex-col md:flex-row gap-8 items-start md:items-center bg-stone-900 p-8 rounded-[2rem] text-white shadow-xl overflow-hidden relative">
+              <div className="absolute inset-0 opacity-10">
+                {prodImage && (
+                  <Image 
+                    src={prodImage.imageUrl} 
+                    alt={prodImage.description} 
+                    fill 
+                    className="object-cover"
+                    data-ai-hint={prodImage.imageHint}
+                  />
+                )}
               </div>
-              <div className="space-y-1">
+              <div className="w-24 h-24 bg-white/10 rounded-2xl flex items-center justify-center overflow-hidden relative z-10 shrink-0">
+                {prodImage && (
+                  <Image 
+                    src={prodImage.imageUrl} 
+                    alt={prodImage.description} 
+                    fill 
+                    className="object-cover"
+                    data-ai-hint={prodImage.imageHint}
+                  />
+                )}
+              </div>
+              <div className="space-y-1 relative z-10">
                 <p className="text-[0.55rem] tracking-[0.2em] uppercase text-primary font-bold">Enquiring about</p>
                 <h1 className="font-headline text-2xl lg:text-3xl">{product.name}</h1>
                 <p className="text-stone-400 text-xs font-light tracking-wider uppercase">{product.model}</p>

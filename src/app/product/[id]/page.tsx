@@ -1,4 +1,6 @@
+
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getProductById } from "@/lib/catalog";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -7,6 +9,7 @@ import { Recommendations } from "@/components/Recommendations";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 export default async function ProductPage({ params }: { params: { id: string } }) {
   const { id } = await params;
@@ -14,6 +17,8 @@ export default async function ProductPage({ params }: { params: { id: string } }
 
   if (!result) return notFound();
   const { product, category, group } = result;
+
+  const prodImage = PlaceHolderImages.find(img => img.id === product.image);
 
   return (
     <div className="min-h-screen bg-stone-50">
@@ -31,17 +36,28 @@ export default async function ProductPage({ params }: { params: { id: string } }
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           {/* Image Area */}
-          <div className="relative aspect-square bg-stone-100 rounded-[2.5rem] flex items-center justify-center text-[10rem] sticky top-32 overflow-hidden shadow-sm">
-            <div className="bg-grain opacity-5" />
-            <span className="z-10">{product.emoji}</span>
+          <div className="relative aspect-square bg-stone-100 rounded-[2.5rem] sticky top-32 overflow-hidden shadow-sm group">
+            <div className="bg-grain opacity-5 z-10" />
+            {prodImage && (
+              <Image 
+                src={prodImage.imageUrl} 
+                alt={prodImage.description} 
+                fill 
+                className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                data-ai-hint={prodImage.imageHint}
+              />
+            )}
           </div>
 
           {/* Info Area */}
           <div className="space-y-10">
             <div className="space-y-4">
-              <p className="text-[0.6rem] tracking-[0.3em] uppercase text-primary font-bold">
-                {category.id} › {group.name}
-              </p>
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">{product.emoji}</span>
+                <p className="text-[0.6rem] tracking-[0.3em] uppercase text-primary font-bold">
+                  {category.id} › {group.name}
+                </p>
+              </div>
               <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl text-stone-900 leading-tight">
                 {product.name}
               </h1>
