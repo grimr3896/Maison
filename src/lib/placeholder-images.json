@@ -3,38 +3,176 @@
     {
       "id": "hero-kitchen",
       "description": "Modern luxury kitchen with high-end appliances",
-      "imageUrl": "https://images.unsplash.com/photo-1610177534644-34d881503b83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc3MTYxNjk0OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1592506119503-c0b18879bd5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtb2Rlcm4lMjBraXRjaGVufGVufDB8fHx8MTc3MTYxNjk0OXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "modern kitchen"
     },
     {
       "id": "hero-furniture",
       "description": "Elegant living room with designer furniture",
-      "imageUrl": "https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBmdXJuaXR1cmV8ZW58MHx8fHwxNzcxNjI0OTE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "modern furniture"
+      "imageUrl": "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaXZpbmclMjByb29tfGVufDB8fHx8MTc3MTY1MTI3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "living room"
     },
     {
       "id": "hero-gaming",
       "description": "Ultramodern gaming setup with neon lighting",
-      "imageUrl": "https://images.unsplash.com/photo-1630201129622-a8e8ef3f7245?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxnYW1pbmclMjBzZXR1cHxlbnwwfHx8fDE3NzE1NjQ4NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1708481480603-b47ea65c80b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnYW1pbmclMjBzZXR1cHxlbnwwfHx8fDE3NzE1NjQ4NzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "gaming setup"
     },
     {
       "id": "about-maison",
       "description": "Beautifully lit interior of a luxury home store",
-      "imageUrl": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsdXh1cnklMjBob21lfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxsdXh1cnklMjBob21lfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "luxury home"
     },
     {
       "id": "about-philosophy",
       "description": "Minimalist designer studio workspace",
-      "imageUrl": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzcxNjk3MDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1770837441560-eec808058323?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtaW5pbWFsaXN0JTIwc3R1ZGlvfGVufDB8fHx8MTc3MTY4MjI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "minimalist studio"
     },
     {
       "id": "about-team",
       "description": "Professional team working in a bright office",
-      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzcxNjk3MDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidXNpbmVzcyUyMHRlYW18ZW58MHx8fHwxNzcxNTU5MDY1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "business team"
+    },
+    {
+      "id": "prod-blender-1",
+      "description": "ProBlend Vortex 1200 Blender",
+      "imageUrl": "https://images.unsplash.com/photo-1767201364709-6081f4be46cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YmxlbmRlciUyMG1hY2hpbmV8ZW58MHx8fHwxNzcxNjgyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blender machine"
+    },
+    {
+      "id": "prod-blender-2",
+      "description": "NutriBlend Compact 600",
+      "imageUrl": "https://images.unsplash.com/photo-1654179280447-8dfcf49a54d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbW9vdGhpZSUyMGJsZW5kZXJ8ZW58MHx8fHwxNzcxNjgyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smoothie blender"
+    },
+    {
+      "id": "prod-fryer-1",
+      "description": "CrispMaster Air Fryer XL",
+      "imageUrl": "https://images.unsplash.com/photo-1669385184491-8ab70b39324e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhaXIlMjBmcnllcnxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "air fryer"
+    },
+    {
+      "id": "prod-fryer-2",
+      "description": "SlimFry Compact 3.5L",
+      "imageUrl": "https://images.unsplash.com/photo-1576521528238-eedd3602b8a5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzbWFsbCUyMGZyeWVyfGVufDB8fHx8MTc3MTY4MjI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "small fryer"
+    },
+    {
+      "id": "prod-coffee-1",
+      "description": "Barista Pro Espresso Machine",
+      "imageUrl": "https://images.unsplash.com/photo-1582572426223-d152057ba012?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlc3ByZXNzbyUyMG1hY2hpbmV8ZW58MHx8fHwxNzcxNjgyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "espresso machine"
+    },
+    {
+      "id": "prod-coffee-2",
+      "description": "BrewMaster Drip Coffee Maker",
+      "imageUrl": "https://images.unsplash.com/photo-1593369196682-6d8ec9ff3ae0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjb2ZmZWUlMjBtYWtlcnxlbnwwfHx8fDE3NzE2NjA4MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee maker"
+    },
+    {
+      "id": "prod-juicer-1",
+      "description": "SlowPress Cold Juicer Pro",
+      "imageUrl": "https://images.unsplash.com/photo-1572701589342-40cc36fa1c09?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2xkJTIwcHJlc3MlMjBqdWljZXJ8ZW58MHx8fHwxNzcxNjgyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cold press juicer"
+    },
+    {
+      "id": "prod-juicer-2",
+      "description": "CitrusSpin Electric Juicer",
+      "imageUrl": "https://images.unsplash.com/photo-1537647164283-cd2713572061?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaXRydXMlMjBqdWljZXJ8ZW58MHx8fHwxNzcxNjc5NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "citrus juicer"
+    },
+    {
+      "id": "prod-sofa-1",
+      "description": "Oslo Modular Sofa",
+      "imageUrl": "https://images.unsplash.com/photo-1762803841422-5b8cf8767cd9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bW9kZXJuJTIwc29mYXxlbnwwfHx8fDE3NzE2ODIyODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern sofa"
+    },
+    {
+      "id": "prod-sofa-2",
+      "description": "Velo Velvet Loveseat",
+      "imageUrl": "https://images.unsplash.com/photo-1771316210386-39662a3b28fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2ZWx2ZXQlMjBzb2ZhfGVufDB8fHx8MTc3MTY4MjI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "velvet sofa"
+    },
+    {
+      "id": "prod-bed-1",
+      "description": "Haven Platform Bed Frame",
+      "imageUrl": "https://images.unsplash.com/photo-1756888218644-aeb9c044e1df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwbGF0Zm9ybSUyMGJlZHxlbnwwfHx8fDE3NzE2ODIyODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "platform bed"
+    },
+    {
+      "id": "prod-bed-2",
+      "description": "Arcadia Storage Bed",
+      "imageUrl": "https://images.unsplash.com/photo-1768253843445-49fa5f4a801f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzdG9yYWdlJTIwYmVkfGVufDB8fHx8MTc3MTY3OTYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "storage bed"
+    },
+    {
+      "id": "prod-chair-1",
+      "description": "Ember Executive Chair",
+      "imageUrl": "https://images.unsplash.com/photo-1541558869434-2840d308329a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxvZmZpY2UlMjBjaGFpcnxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "office chair"
+    },
+    {
+      "id": "prod-chair-2",
+      "description": "Ren Dining Chair",
+      "imageUrl": "https://images.unsplash.com/photo-1611633332753-d1e2f695aa3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaW5pbmclMjBjaGFpcnxlbnwwfHx8fDE3NzE2Nzk2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dining chair"
+    },
+    {
+      "id": "prod-table-1",
+      "description": "Slab Dining Table",
+      "imageUrl": "https://images.unsplash.com/photo-1495195129352-aeb325a55b65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b29kZW4lMjB0YWJsZXxlbnwwfHx8fDE3NzE2ODIyODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wooden table"
+    },
+    {
+      "id": "prod-table-2",
+      "description": "Float Adjustable Desk",
+      "imageUrl": "https://images.unsplash.com/photo-1696453424380-4ca465118518?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdGFuZGluZyUyMGRlc2t8ZW58MHx8fHwxNzcxNTkzNzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "standing desk"
+    },
+    {
+      "id": "prod-ps5",
+      "description": "PlayStation 5 Console",
+      "imageUrl": "https://images.unsplash.com/photo-1593118247619-e2d6f056869e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnYW1pbmclMjBjb25zb2xlfGVufDB8fHx8MTc3MTU3Njk5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming console"
+    },
+    {
+      "id": "prod-xbox",
+      "description": "Xbox Series X",
+      "imageUrl": "https://images.unsplash.com/photo-1637393847055-7553c720c805?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibGFjayUyMGNvbnNvbGV8ZW58MHx8fHwxNzcxNjgyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "black console"
+    },
+    {
+      "id": "prod-switch",
+      "description": "Nintendo Switch OLED",
+      "imageUrl": "https://images.unsplash.com/photo-1695028644151-1ec92bae9fb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYW5kaGVsZCUyMGNvbnNvbGV8ZW58MHx8fHwxNzcxNjgyMjg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "handheld console"
+    },
+    {
+      "id": "prod-controller-1",
+      "description": "DualSense Wireless Controller",
+      "imageUrl": "https://images.unsplash.com/photo-1538895194639-f50554a2ca24?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnYW1lJTIwY29udHJvbGxlcnxlbnwwfHx8fDE3NzE2MTEzMjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "game controller"
+    },
+    {
+      "id": "prod-controller-2",
+      "description": "Xbox Elite Series 2",
+      "imageUrl": "https://images.unsplash.com/photo-1563726425774-6f49e972ed37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxwcm8lMjBjb250cm9sbGVyfGVufDB8fHx8MTc3MTY4MjI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pro controller"
+    },
+    {
+      "id": "prod-headset-1",
+      "description": "SteelSeries Arctis Nova Pro",
+      "imageUrl": "https://images.unsplash.com/photo-1610041321327-b794c052db27?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnYW1pbmclMjBoZWFkc2V0fGVufDB8fHx8MTc3MTY4MjI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "gaming headset"
+    },
+    {
+      "id": "prod-storage-1",
+      "description": "Seagate Game Drive 4TB",
+      "imageUrl": "https://images.unsplash.com/photo-1627486144847-03f8c678f90d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxleHRlcm5hbCUyMGRyaXZlfGVufDB8fHx8MTc3MTY4MjI4NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "external drive"
     }
   ]
 }
