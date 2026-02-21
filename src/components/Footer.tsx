@@ -26,9 +26,9 @@ export function Footer() {
         </div>
 
         <div className="space-y-6">
-          <p className="text-[0.6rem] uppercase tracking-[0.2em] text-primary font-bold">Support</p>
+          <p className="text-[0.6rem] uppercase tracking-[0.2em] text-primary font-bold">Company</p>
           <ul className="space-y-3 text-sm font-light">
-            <li><Link href="#" className="hover:text-white transition-colors">How It Works</Link></li>
+            <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Delivery Info</Link></li>
             <li><Link href="#" className="hover:text-white transition-colors">Returns Policy</Link></li>
           </ul>

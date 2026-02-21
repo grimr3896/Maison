@@ -19,7 +19,7 @@ export function Navbar() {
   }, []);
 
   const isHome = pathname === "/";
-  const isDark = isHome && !isScrolled;
+  const isDarkHero = isHome && !isScrolled;
 
   return (
     <nav
@@ -34,7 +34,7 @@ export function Navbar() {
         href="/"
         className={cn(
           "font-headline text-2xl tracking-widest transition-colors",
-          isDark ? "text-background" : "text-foreground"
+          isDarkHero ? "text-background" : "text-foreground"
         )}
       >
         MAISON
@@ -43,7 +43,7 @@ export function Navbar() {
       <div
         className={cn(
           "hidden md:flex items-center border rounded-full overflow-hidden transition-all",
-          isDark ? "border-background/20" : "border-border"
+          isDarkHero ? "border-background/20" : "border-border"
         )}
       >
         {Object.entries(CATALOG).map(([key, cat]) => (
@@ -54,21 +54,34 @@ export function Navbar() {
               "px-6 py-2 text-[0.7rem] uppercase tracking-widest transition-all border-r last:border-r-0 hover:bg-primary hover:text-primary-foreground",
               pathname.includes(`/category/${key}`)
                 ? "bg-primary text-primary-foreground"
-                : isDark
+                : isDarkHero
                 ? "text-background/80 border-background/10"
                 : "text-foreground/70 border-border"
             )}
           >
-            {cat.emoji} {cat.id}
+             {cat.id}
           </Link>
         ))}
+        <Link
+          href="/about"
+          className={cn(
+            "px-6 py-2 text-[0.7rem] uppercase tracking-widest transition-all hover:bg-primary hover:text-primary-foreground",
+            pathname === "/about"
+              ? "bg-primary text-primary-foreground"
+              : isDarkHero
+              ? "text-background/80 border-background/10"
+              : "text-foreground/70 border-border"
+          )}
+        >
+          About
+        </Link>
       </div>
 
       <Link
         href="/"
         className={cn(
           "text-[0.68rem] uppercase tracking-widest transition-colors hover:text-primary",
-          isDark ? "text-background/40" : "text-muted-foreground"
+          isDarkHero ? "text-background/40" : "text-muted-foreground"
         )}
       >
         {isHome ? "Curated Collections" : "← Back Home"}

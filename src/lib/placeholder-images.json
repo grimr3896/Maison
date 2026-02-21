@@ -19,148 +19,22 @@
       "imageHint": "gaming setup"
     },
     {
-      "id": "prod-blender-1",
-      "description": "High performance silver countertop blender",
-      "imageUrl": "https://images.unsplash.com/photo-1767465837503-c0f3c2e00c29?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzaWx2ZXIlMjBibGVuZGVyfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "silver blender"
-    },
-    {
-      "id": "prod-blender-2",
-      "description": "Compact personal smoothie blender",
-      "imageUrl": "https://picsum.photos/seed/5/600/600",
-      "imageHint": "personal blender"
-    },
-    {
-      "id": "prod-fryer-1",
-      "description": "Large digital air fryer on kitchen counter",
-      "imageUrl": "https://images.unsplash.com/photo-1690642109567-940e7fc2cd5d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhaXIlMjBmcnllcnxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "air fryer"
-    },
-    {
-      "id": "prod-fryer-2",
-      "description": "Compact analogue air fryer in white",
-      "imageUrl": "https://picsum.photos/seed/fryer2/600/600",
-      "imageHint": "white fryer"
-    },
-    {
-      "id": "prod-coffee-1",
-      "description": "Professional espresso machine with steam wand",
-      "imageUrl": "https://images.unsplash.com/photo-1581068106019-5aa70c6ab424?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxlc3ByZXNzbyUyMG1hY2hpbmV8ZW58MHx8fHwxNzcxNTEwMTk1fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "espresso machine"
-    },
-    {
-      "id": "prod-coffee-2",
-      "description": "Drip coffee maker with glass carafe",
-      "imageUrl": "https://images.unsplash.com/photo-1458060390477-1b8bc1cfe017?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y29mZmVlJTIwbWFrZXJ8ZW58MHx8fHwxNzcxNjYwODA2fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "coffee maker"
-    },
-    {
-      "id": "prod-juicer-1",
-      "description": "Slow masticating cold press juicer",
-      "imageUrl": "https://images.unsplash.com/photo-1566846128021-b940b0eec910?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb2xkJTIwanVpY2VyfGVufDB8fHx8MTc3MTY3OTYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "cold juicer"
-    },
-    {
-      "id": "prod-juicer-2",
-      "description": "Electric citrus juicer spinning",
-      "imageUrl": "https://images.unsplash.com/photo-1614065612682-10dbc3db2b31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaXRydXMlMjBqdWljZXJ8ZW58MHx8fHwxNzcxNjc5NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "citrus juicer"
-    },
-    {
-      "id": "prod-sofa-1",
-      "description": "Grey modular Scandinavian style sofa",
-      "imageUrl": "https://images.unsplash.com/photo-1759722668385-90006d9c7aa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxncmV5JTIwc29mYXxlbnwwfHx8fDE3NzE1NDExOTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "grey sofa"
-    },
-    {
-      "id": "prod-sofa-2",
-      "description": "Velvet pink loveseat with wood legs",
-      "imageUrl": "https://images.unsplash.com/photo-1643734467137-311870f29859?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaW5rJTIwbG92ZXNlYXR8ZW58MHx8fHwxNzcxNjc5NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "pink loveseat"
-    },
-    {
-      "id": "prod-bed-1",
-      "description": "Modern walnut platform bed with white linens",
-      "imageUrl": "https://picsum.photos/seed/9/600/600",
-      "imageHint": "walnut bed"
-    },
-    {
-      "id": "prod-bed-2",
-      "description": "Elegant storage bed with drawers",
-      "imageUrl": "https://images.unsplash.com/photo-1769690398694-9c5d5ca4b4ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzdG9yYWdlJTIwYmVkfGVufDB8fHx8MTc3MTY3OTYyNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "storage bed"
-    },
-    {
-      "id": "prod-chair-1",
-      "description": "Ergonomic black mesh office chair",
-      "imageUrl": "https://images.unsplash.com/photo-1628062699790-7c45262b82b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxvZmZpY2UlMjBjaGFpcnxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "office chair"
-    },
-    {
-      "id": "prod-chair-2",
-      "description": "Solid ash wood dining chair set",
-      "imageUrl": "https://images.unsplash.com/photo-1602872030490-4a484a7b3ba6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaW5pbmclMjBjaGFpcnxlbnwwfHx8fDE3NzE2Nzk2MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dining chair"
-    },
-    {
-      "id": "prod-table-1",
-      "description": "Solid acacia wood dining table",
-      "imageUrl": "https://images.unsplash.com/photo-1615066390971-03e4e1c36ddf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkaW5pbmclMjB0YWJsZXxlbnwwfHx8fDE3NzE2NjU4MTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dining table"
-    },
-    {
-      "id": "prod-table-2",
-      "description": "Electric height adjustable standing desk",
-      "imageUrl": "https://images.unsplash.com/photo-1622579522120-85a1669d76b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzdGFuZGluZyUyMGRlc2t8ZW58MHx8fHwxNzcxNTkzNzM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "standing desk"
-    },
-    {
-      "id": "prod-ps5",
-      "description": "PlayStation 5 console with DualSense controller",
-      "imageUrl": "https://images.unsplash.com/photo-1665041974623-d398d035023e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxwczUlMjBjb25zb2xlfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "ps5 console"
-    },
-    {
-      "id": "prod-xbox",
-      "description": "Xbox Series X console in dark setting",
-      "imageUrl": "https://images.unsplash.com/photo-1543622748-5ee7237e8565?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx4Ym94JTIwY29uc29sZXxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "xbox console"
-    },
-    {
-      "id": "prod-switch",
-      "description": "Nintendo Switch OLED white model",
-      "imageUrl": "https://images.unsplash.com/photo-1585857188823-77658a70979a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuaW50ZW5kbyUyMHN3aXRjaHxlbnwwfHx8fDE3NzE2MjQ5MTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "nintendo switch"
-    },
-    {
-      "id": "prod-controller-1",
-      "description": "Black wireless gaming controller",
-      "imageUrl": "https://images.unsplash.com/photo-1611138290962-2c550ffd4002?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBjb250cm9sbGVyfGVufDB8fHx8MTc3MTYwODQ2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gaming controller"
-    },
-    {
-      "id": "prod-controller-2",
-      "description": "Xbox Elite Series 2 professional controller",
-      "imageUrl": "https://images.unsplash.com/photo-1602610423018-9b72909e9f80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbGl0ZSUyMGNvbnRyb2xsZXJ8ZW58MHx8fHwxNzcxNjc5NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "elite controller"
-    },
-    {
-      "id": "prod-headset-1",
-      "description": "Premium wireless gaming headset",
-      "imageUrl": "https://images.unsplash.com/photo-1629429407756-4a7703614972?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBoZWFkc2V0fGVufDB8fHx8MTc3MTUyMDEzNHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "gaming headset"
-    },
-    {
-      "id": "prod-storage-1",
-      "description": "4TB external game drive for consoles",
-      "imageUrl": "https://images.unsplash.com/photo-1756836857608-16c9213c1d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxleHRlcm5hbCUyMHN0b3JhZ2V8ZW58MHx8fHwxNzcxNjc5NjI0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "external storage"
-    },
-    {
       "id": "about-maison",
       "description": "Beautifully lit interior of a luxury home store",
       "imageUrl": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsdXh1cnklMjBob21lfGVufDB8fHx8MTc3MTYyNDkxNnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "luxury home"
+    },
+    {
+      "id": "about-philosophy",
+      "description": "Minimalist designer studio workspace",
+      "imageUrl": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzcxNjk3MDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist studio"
+    },
+    {
+      "id": "about-team",
+      "description": "Professional team working in a bright office",
+      "imageUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMG1lZXRpbmd8ZW58MHx8fHwxNzcxNjk3MDYyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "business team"
     }
   ]
 }
