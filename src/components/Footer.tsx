@@ -37,9 +37,8 @@ export function Footer() {
         <div className="space-y-6">
           <p className="text-[0.6rem] uppercase tracking-[0.2em] text-primary font-bold">Contact</p>
           <ul className="space-y-3 text-sm font-light">
-            <li className="text-stone-400">hello@maisonstore.co</li>
-            <li className="text-stone-400">+254 700 000 000</li>
-            <li className="text-stone-400">Nairobi, Kenya</li>
+            <li className="text-stone-400">brisbaneloaders@gmail.com</li>
+            <li className="text-stone-400">Brisbane CBD, QLD, Australia</li>
           </ul>
         </div>
       </div>
