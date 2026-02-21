@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import { CATALOG } from "@/lib/catalog";
 
@@ -17,7 +18,7 @@ export function Footer() {
           <ul className="space-y-3">
             {Object.entries(CATALOG).map(([key, cat]) => (
               <li key={key}>
-                <Link href={`/category/${key}`} className="text-sm font-light hover:text-white transition-colors">
+                <Link href={`/${key}`} className="text-sm font-light hover:text-white transition-colors">
                   {cat.label}
                 </Link>
               </li>

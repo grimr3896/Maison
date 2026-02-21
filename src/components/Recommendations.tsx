@@ -58,9 +58,13 @@ export function Recommendations({ currentProductId }: Props) {
         {recs.recommendations.map((rec) => {
           const item = getProductById(rec.id);
           if (!item) return null;
-          const prodImage = PlaceHolderImages.find(img => img.id === item.product.image);
+          
+          const { category, product } = item;
+          const groupId = Object.keys(category.groups).find(k => category.groups[k].name === item.group.name);
+          const prodImage = PlaceHolderImages.find(img => img.id === product.image);
+          
           return (
-            <Link key={rec.id} href={`/product/${rec.id}`}>
+            <Link key={rec.id} href={`/${category.id}/${groupId}/${rec.id}`}>
               <Card className="h-full hover:shadow-xl transition-all duration-300 overflow-hidden group border-none bg-stone-100/50">
                 <CardContent className="p-0">
                   <div className="aspect-square relative flex items-center justify-center bg-stone-200/50 overflow-hidden">
@@ -79,7 +83,7 @@ export function Recommendations({ currentProductId }: Props) {
                       {item.group.name}
                     </p>
                     <h4 className="font-headline text-lg group-hover:text-primary transition-colors">
-                      {item.product.name}
+                      {product.name}
                     </h4>
                     <p className="text-xs text-muted-foreground line-clamp-2 leading-relaxed italic">
                       &quot;{rec.reason}&quot;

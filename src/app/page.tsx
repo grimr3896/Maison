@@ -38,7 +38,7 @@ export default function Home() {
               return (
                 <Link
                   key={key}
-                  href={`/category/${key}`}
+                  href={`/${key}`}
                   className="group relative w-[200px] h-[250px] overflow-hidden rounded-2xl flex flex-col justify-end p-6 transition-all hover:scale-105"
                 >
                   {catImage && (

@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -49,10 +50,10 @@ export function Navbar() {
         {Object.entries(CATALOG).map(([key, cat]) => (
           <Link
             key={key}
-            href={`/category/${key}`}
+            href={`/${key}`}
             className={cn(
               "px-6 py-2 text-[0.7rem] uppercase tracking-widest transition-all border-r last:border-r-0 hover:bg-primary hover:text-primary-foreground",
-              pathname.includes(`/category/${key}`)
+              pathname === `/${key}` || pathname.startsWith(`/${key}/`)
                 ? "bg-primary text-primary-foreground"
                 : isDarkHero
                 ? "text-background/80 border-background/10"
