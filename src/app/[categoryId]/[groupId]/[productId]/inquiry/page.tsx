@@ -21,6 +21,13 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
   const result = getProductById(productId);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: result ? `Hello, I'm interested in the ${result.product.name} and would like to know more about it.` : ""
+  });
 
   if (!result) return notFound();
   const { product } = result;
@@ -30,12 +37,24 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    // Simulate API call
+
+    const companyEmail = "brisbaneloaders@gmail.com";
+    const subject = encodeURIComponent(`Product Inquiry: ${product.name} (${product.model})`);
+    const body = encodeURIComponent(
+      `${formData.message}\n\n---\nCustomer Details:\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nProduct: ${product.name} - ${product.model}`
+    );
+    
+    const mailtoLink = `mailto:${companyEmail}?subject=${subject}&body=${body}`;
+    
+    // Open default mail app
+    window.location.href = mailtoLink;
+
+    // Show success state in UI after a brief delay
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 1500);
+    }, 800);
   };
 
   return (
@@ -86,7 +105,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
               <div className="space-y-2">
                 <h2 className="font-headline text-3xl md:text-4xl text-stone-900">Interested? Let&apos;s Talk.</h2>
                 <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                  Leave your details and we&apos;ll get back to you within 24 hours with everything you need to know about pricing, availability, and delivery.
+                  Fill in your details below. Clicking the button will open your email app with a pre-composed message directed to our team.
                 </p>
               </div>
 
@@ -94,17 +113,37 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label className="text-[0.6rem] uppercase tracking-widest text-stone-500">Full Name</Label>
-                    <Input required placeholder="Your full name" className="bg-white py-6 border-stone-200 rounded-xl" />
+                    <Input 
+                      required 
+                      placeholder="Your full name" 
+                      className="bg-white py-6 border-stone-200 rounded-xl"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    />
                   </div>
                   <div className="space-y-2">
                     <Label className="text-[0.6rem] uppercase tracking-widest text-stone-500">Phone Number</Label>
-                    <Input required type="tel" placeholder="+254 700 000 000" className="bg-white py-6 border-stone-200 rounded-xl" />
+                    <Input 
+                      required 
+                      type="tel" 
+                      placeholder="+254 700 000 000" 
+                      className="bg-white py-6 border-stone-200 rounded-xl"
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
                   <Label className="text-[0.6rem] uppercase tracking-widest text-stone-500">Email Address</Label>
-                  <Input required type="email" placeholder="you@example.com" className="bg-white py-6 border-stone-200 rounded-xl" />
+                  <Input 
+                    required 
+                    type="email" 
+                    placeholder="you@example.com" 
+                    className="bg-white py-6 border-stone-200 rounded-xl"
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  />
                 </div>
 
                 <div className="space-y-2">
@@ -112,7 +151,8 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
                   <Textarea 
                     required 
                     className="bg-white min-h-[150px] border-stone-200 rounded-xl p-4"
-                    defaultValue={`Hello, I'm interested in the ${product.name} and would like to know more about it.`}
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                 </div>
 
@@ -121,11 +161,11 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
                   disabled={loading}
                   className="w-full py-6 bg-primary text-white text-[0.7rem] uppercase tracking-[0.3em] font-bold rounded-xl hover:bg-stone-900 transition-colors disabled:opacity-50"
                 >
-                  {loading ? "Sending..." : "Send Inquiry →"}
+                  {loading ? "Preparing Email..." : "Send Inquiry via Email →"}
                 </button>
                 
                 <p className="text-[0.6rem] text-center text-muted-foreground font-light px-8">
-                  Your details are private and only used to respond to your specific inquiry. No spam, ever.
+                  This will open your email client (Outlook, Gmail, Apple Mail, etc.) to send the message directly to brisbaneloaders@gmail.com.
                 </p>
               </form>
             </div>
@@ -136,9 +176,9 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
               <CheckCircle className="w-10 h-10" />
             </div>
             <div className="space-y-4">
-              <h2 className="font-headline text-4xl text-stone-900">Inquiry Sent!</h2>
+              <h2 className="font-headline text-4xl text-stone-900">Email Prepared!</h2>
               <p className="text-muted-foreground font-light leading-relaxed max-w-sm mx-auto">
-                Thank you! We&apos;ve received your inquiry and a team member will reach out via phone or email within 24 hours.
+                If your email app didn&apos;t open automatically, please ensure you have a default mail app configured. You can also email us directly at brisbaneloaders@gmail.com.
               </p>
             </div>
             <Link href="/" className="inline-block">
