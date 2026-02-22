@@ -38,8 +38,8 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
   });
 
   useEffect(() => {
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "CVruh77CgutwA2-c9";
-    emailjs.init(publicKey);
+    // Initialize EmailJS with Public Key
+    emailjs.init("CVruh77CgutwA2-c9");
   }, []);
 
   if (!result) return notFound();
@@ -51,6 +51,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
     e.preventDefault();
     setError(null);
     
+    // Validation
     const errors = {
       name: !formData.name.trim(),
       phone: !formData.phone.trim(),
@@ -65,6 +66,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
 
     setLoading(true);
 
+    // Read product name from the display element
     const productNameDisplay = document.getElementById('productNameDisplay')?.textContent || product.name;
 
     const templateParams = {
@@ -76,11 +78,12 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
       reply_to: formData.email
     };
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_vela48m";
-    const templateOwner = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_OWNER || "template_n0a0boo";
-    const templateCustomer = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CUSTOMER || "template_0rj81y8";
+    const serviceId = "service_vela48m";
+    const templateOwner = "template_n0a0boo";
+    const templateCustomer = "template_0rj81y8";
 
     try {
+      // Send both emails (Owner notification and Customer auto-reply)
       await emailjs.send(serviceId, templateOwner, templateParams);
       await emailjs.send(serviceId, templateCustomer, templateParams);
       
@@ -88,7 +91,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch (err: any) {
       const errorMessage = err?.text || err?.message || JSON.stringify(err);
-      console.error("EmailJS Submission Error:", errorMessage);
+      console.error("EmailJS Error:", errorMessage);
       setError("Something went wrong. Please try again or contact us directly.");
     } finally {
       setLoading(false);
@@ -109,6 +112,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
 
         {!submitted ? (
           <div className="space-y-10 sm:space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            {/* Product Summary Header */}
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-start sm:items-center bg-stone-900 p-6 sm:p-8 rounded-2xl sm:rounded-[2rem] text-white shadow-xl overflow-hidden relative">
               <div className="absolute inset-0 opacity-10">
                 {prodImage && (
@@ -139,6 +143,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
               </div>
             </div>
 
+            {/* Form Section */}
             <div className="space-y-6 sm:space-y-8">
               <div className="space-y-2">
                 <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl text-stone-900">Interested? Let&apos;s Talk.</h2>
