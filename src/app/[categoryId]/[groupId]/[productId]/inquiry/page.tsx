@@ -1,7 +1,7 @@
 
 "use client";
 
-import { use, useState } from "react";
+import { use, useState, useEffect } from "react";
 import Image from "next/image";
 import { getProductById } from "@/lib/catalog";
 import { Navbar } from "@/components/Navbar";
@@ -9,19 +9,18 @@ import { Footer } from "@/components/Footer";
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { cn } from "@/lib/utils";
-
-declare const emailjs: any;
+import emailjs from '@emailjs/browser';
 
 export default function InquiryPage({ params }: { params: Promise<{ categoryId: string, groupId: string, productId: string }> }) {
   const { productId, categoryId, groupId } = use(params);
   const result = getProductById(productId);
+  
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -38,6 +37,12 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
     phone: false,
     email: false
   });
+
+  useEffect(() => {
+    // Initialize EmailJS on the client side with the provided public key
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "CVruh77CgutwA2-c9";
+    emailjs.init(publicKey);
+  }, []);
 
   if (!result) return notFound();
   const { product } = result;
@@ -63,25 +68,35 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
 
     setLoading(true);
 
+    // Read product name from the DOM as per the guide's strict requirement
+    const productNameDisplay = document.getElementById('productNameDisplay')?.textContent || product.name;
+
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,
-      product_name: product.name,
+      product_name: productNameDisplay,
       message: formData.message,
       reply_to: formData.email
     };
 
+    // Use environment variables with fallbacks to the provided verified IDs
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_l0ujvr6";
+    const templateOwner = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_OWNER || "template_n0a0boo";
+    const templateCustomer = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CUSTOMER || "template_0rj81y8";
+
     try {
       // 1. Notify store owner
-      await emailjs.send('service_l0ujvr6', 'template_n0a0boo', templateParams);
+      await emailjs.send(serviceId, templateOwner, templateParams);
       // 2. Auto-reply to customer
-      await emailjs.send('service_l0ujvr6', 'template_0rj81y8', templateParams);
+      await emailjs.send(serviceId, templateCustomer, templateParams);
       
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } catch (err) {
-      console.error("EmailJS Error:", err);
+    } catch (err: any) {
+      // EmailJS errors often contain a .text or .message property
+      const errorMessage = err?.text || err?.message || JSON.stringify(err);
+      console.error("EmailJS Submission Error:", errorMessage);
       setError("Something went wrong. Please try again or contact us directly.");
     } finally {
       setLoading(false);
@@ -209,11 +224,12 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
                   <span className="btn-text">Send Inquiry →</span>
                 </button>
                 
-                {error && (
-                  <p id="formError" className="text-red-500 text-[0.7rem] text-center font-bold">
-                    {error}
-                  </p>
-                )}
+                <p id="formError" className={cn(
+                  "text-red-500 text-[0.7rem] text-center font-bold",
+                  !error && "hidden"
+                )}>
+                  {error}
+                </p>
                 
                 <p className="text-[0.6rem] text-center text-muted-foreground font-light px-8">
                   Your details are private and only used to respond to your specific inquiry. No spam, ever.
@@ -233,9 +249,9 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
               </p>
             </div>
             <Link href="/" className="inline-block">
-              <Button variant="outline" className="px-12 py-6 text-xs uppercase tracking-widest border-primary text-primary hover:bg-primary hover:text-white transition-all rounded-xl">
+              <button className="px-12 py-6 text-xs uppercase tracking-widest border border-primary text-primary hover:bg-primary hover:text-white transition-all rounded-xl">
                 Continue Browsing
-              </Button>
+              </button>
             </Link>
           </div>
         )}
