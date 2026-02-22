@@ -9,6 +9,13 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '380px',
+        sm: '560px',
+        md: '768px',
+        lg: '960px',
+        xl: '1280px',
+      },
       fontFamily: {
         body: ['PT Sans', 'sans-serif'],
         headline: ['Playfair Display', 'serif'],
