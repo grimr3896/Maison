@@ -76,7 +76,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
       reply_to: formData.email
     };
 
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_l0ujvr6";
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_vela48m";
     const templateOwner = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_OWNER || "template_n0a0boo";
     const templateCustomer = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CUSTOMER || "template_0rj81y8";
 
@@ -133,7 +133,7 @@ export default function InquiryPage({ params }: { params: Promise<{ categoryId: 
                 )}
               </div>
               <div className="space-y-1 relative z-10">
-                <p className="text-[0.5rem] xs:text-[0.55rem] tracking-[0.2em] uppercase text-primary font-bold">Enquiring about</p>
+                <p className="text-[0.55rem] xs:text-[0.55rem] tracking-[0.2em] uppercase text-primary font-bold">Enquiring about</p>
                 <h1 id="productNameDisplay" className="font-headline text-xl sm:text-2xl lg:text-3xl">{product.name}</h1>
                 <p className="text-stone-400 text-[0.6rem] sm:text-xs font-light tracking-wider uppercase">{product.model}</p>
               </div>
