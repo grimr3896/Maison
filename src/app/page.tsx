@@ -45,6 +45,7 @@ export default function Home() {
                       src={catImage.imageUrl} 
                       alt={catImage.description} 
                       fill 
+                      sizes="(max-width: 560px) 100vw, (max-width: 960px) 33vw, 200px"
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                       data-ai-hint={catImage.imageHint}
                     />
@@ -103,6 +104,7 @@ export default function Home() {
               src={aboutImage.imageUrl} 
               alt={aboutImage.description} 
               fill 
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
               data-ai-hint={aboutImage.imageHint}
             />

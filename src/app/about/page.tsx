@@ -25,8 +25,9 @@ export default function AboutPage() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover opacity-40 grayscale"
             priority
+            sizes="100vw"
+            className="object-cover opacity-40 grayscale"
             data-ai-hint={heroImage.imageHint}
           />
         )}
@@ -67,6 +68,7 @@ export default function AboutPage() {
               src={philosophyImage.imageUrl}
               alt={philosophyImage.description}
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
               data-ai-hint={philosophyImage.imageHint}
             />
@@ -84,6 +86,7 @@ export default function AboutPage() {
                 src={teamImage.imageUrl}
                 alt={teamImage.description}
                 fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover"
                 data-ai-hint={teamImage.imageHint}
               />

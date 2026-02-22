@@ -33,6 +33,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               src={heroImage.imageUrl} 
               alt={heroImage.description} 
               fill 
+              priority
+              sizes="100vw"
               className="object-cover"
               data-ai-hint={heroImage.imageHint}
             />
@@ -118,6 +120,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                               src={prodImage.imageUrl} 
                               alt={prodImage.description} 
                               fill 
+                              sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, (max-width: 1280px) 33vw, 25vw"
                               className="object-cover transition-transform duration-700 group-hover:scale-110"
                               data-ai-hint={prodImage.imageHint}
                             />

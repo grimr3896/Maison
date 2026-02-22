@@ -46,6 +46,8 @@ export default async function ProductPage({ params }: { params: Promise<{ catego
                 src={prodImage.imageUrl} 
                 alt={prodImage.description} 
                 fill 
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover transition-transform duration-1000 group-hover:scale-105"
                 data-ai-hint={prodImage.imageHint}
               />

@@ -1,4 +1,3 @@
-
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { CATALOG } from "@/lib/catalog";
@@ -59,6 +58,7 @@ export default async function GroupPage({ params }: { params: Promise<{ category
                       src={prodImage.imageUrl} 
                       alt={prodImage.description} 
                       fill 
+                      sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, (max-width: 1280px) 33vw, 25vw"
                       className="object-cover transition-transform duration-1000 group-hover:scale-110"
                       data-ai-hint={prodImage.imageHint}
                     />
